@@ -82,22 +82,9 @@ public class UserController {
 		
 	}	
 		@PutMapping("/updateUser")
-	public ResponseEntity<?> updateUserById(@PathVariable Long idUser,
-			@RequestBody UamUserEntity uamUserEntity) 
-		{
-			Map<String,Object> map = new HashMap<String,Object>();
-			try {
-				UamUserEntity userEntity = uamUserService.findById(idUser);
-				
-				map.put("status", 1);
-				map.put("data", uamUserService.findById(idUser));
-				
-				return new ResponseEntity<>(map, HttpStatus.OK);
-				
-			}catch(Exception e) {
-				
-			}
+		public UamUserEntity updateUserById(@RequestBody UamUserEntity uamUserEntity) {
 			
+			return uamUserService.updateUser(uamUserEntity) ;
 			
 		}
 		
