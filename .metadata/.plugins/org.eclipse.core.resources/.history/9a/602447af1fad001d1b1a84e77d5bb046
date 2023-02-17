@@ -1,0 +1,32 @@
+package com.mango.uam.entity;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "UAM_ROLE")
+public class UAMRole {
+	
+	@Id
+	private Long id;
+	
+	private String name;
+	
+	private String isDefault;
+	
+	private String status;
+	
+	private Date startDate;
+	
+	private Date endDate;
+	
+	private Long createdBy;
+	
+	private Date creationDate;
+	
+	private Long lastUpdateLogin;
+
+}

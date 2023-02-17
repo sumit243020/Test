@@ -1,0 +1,5 @@
+package com.mango.uam.Service;
+
+public interface UamUserService {
+
+}

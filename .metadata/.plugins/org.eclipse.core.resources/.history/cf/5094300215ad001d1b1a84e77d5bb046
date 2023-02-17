@@ -1,0 +1,16 @@
+#spring.datasource.url=jdbc:mysql://localhost:3306/uam
+#spring.datasource.username=javadevjournal
+#spring.datasource.password=ThePassword
+#spring.jpa.hibernate.ddl-auto=update
+
+port=7777
+
+debug=true
+
+spring.datasource.url=jdbc:mysql://localhost:3306/uam_test
+spring.datasource.username=root
+spring.datasource.password=root
+
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5InnoDBDialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true

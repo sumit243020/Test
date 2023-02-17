@@ -1,0 +1,70 @@
+package com.mango.uam.entity;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class UAMUserEntity {
+	
+	@Id
+	@Column(name ="ID")
+	private Long id;
+	
+	@Column(name ="EMPLOYEE_ID")
+	private Long employeeId;
+	
+	@Column(name ="USER_NAME")
+	private String userName;
+	
+	@Column(name ="PASSWORD")
+	private String password;
+	
+	@Column(name ="STATUS")
+	private String status;
+	
+	@Column(name ="START_DATE")
+	private Date startDate;
+	
+	@Column(name ="END_DATE")
+	private Date endDate;
+	
+	@Column(name ="CREATED_BY")
+	private Long createdBy;
+	
+	@Column(name ="CREATION_DATE")
+	private Date creationDate;
+	
+	@Column(name ="LAST_UPDATE_LOGIN")
+	private Long lastUpdateLogin;
+	
+	@Column(name ="LAST_UPDATE_BY")
+	private Long lastUpdateBy;
+	
+	@Column(name ="LAST_UPDATE_DATE")
+	private Date lastUpdateDate;
+	
+	@Column(name ="LAST_UPDATE_PASSWORD_DATE")
+	private Date lastUpdatePasswordDate;
+	
+	@Column(name ="NAME")
+	private String name;
+	
+	@Column(name ="USER_TYPE")
+	private String userType;
+	
+	@Column(name ="EMAIL")
+	private String email;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

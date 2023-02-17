@@ -1,0 +1,5 @@
+package com.mango.uam.repository;
+
+public interface UamUserRepository {
+
+}

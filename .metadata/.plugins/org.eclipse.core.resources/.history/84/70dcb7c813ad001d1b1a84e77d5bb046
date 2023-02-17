@@ -1,0 +1,8 @@
+package com.mango.uam.controller;
+
+@RestController
+@RequestMapping("mail")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
+public class Test {
+
+}

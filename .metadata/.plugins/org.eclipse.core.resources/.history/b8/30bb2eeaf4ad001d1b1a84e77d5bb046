@@ -1,0 +1,59 @@
+package com.mango.uam.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.mango.uam.entity.UamUserEntity;
+import com.mango.uam.repository.UamUserRepository;
+
+@Service
+public class UamUserServiceImpl implements UamUserService {
+			
+	@Autowired
+	private UamUserRepository uamUserRepository;
+
+	@Override
+	public List<UamUserEntity> getAllUser() {
+		
+		return uamUserRepository.findAll();
+	}
+
+	@Override
+	public ResponseEntity<UamUserEntity> getUserById(Long idUser) {
+		
+		UamUserEntity uamUser = uamUserRepository.getById(idUser);
+		
+	if(uamUser == null) {
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+	}
+		
+		return 
+	}
+
+	@Override
+	public UamUserEntity saveUser(UamUserEntity uamUserEntity) {
+		
+		return uamUserRepository.save(uamUserEntity);
+	}
+
+	@Override
+	public UamUserEntity updateUser(UamUserEntity uamUserEntity) {
+		
+		return uamUserRepository.save(uamUserEntity);
+	}
+
+	@Override
+	public void deleteUserById(Long idUser) {
+
+		uamUserRepository.deleteById(idUser);	
+		
+	}
+
+	
+}

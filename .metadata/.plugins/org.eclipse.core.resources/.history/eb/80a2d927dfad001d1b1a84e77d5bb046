@@ -1,0 +1,31 @@
+package com.mango.uam.controller;
+
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.mango.uam.Service.UamUserService;
+import com.mango.uam.entity.UserEntity;
+
+@RestController
+public class UserController {
+	
+	@Autowired
+	private UamUserService uamUserService;
+	
+	
+	public ResponseEntity<UserEntity> getUsers() {
+		
+		
+		return new uamUserService.ResponseEntity<UserEntity> getAllUser();
+		
+}
+	
+
+}	

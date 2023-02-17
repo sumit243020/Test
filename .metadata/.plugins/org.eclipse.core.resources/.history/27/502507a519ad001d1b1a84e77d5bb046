@@ -1,0 +1,30 @@
+package com.mango.uam.entity;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
+
+public class UAMUserEntity {
+	
+	@Id
+	@Column(name ="ID")
+	private Long id;
+	
+	@Column(name ="EMPLOYEE_ID")
+	private Long employeeId;
+	
+	@Column(name ="USER_NAME")
+	private String userName;
+	
+	@Column(name ="PASSWORD")
+	private String password;
+	
+	@Column(name ="STATUS")
+	private String status;
+	
+	private Date startDate;
+	
+	
+
+}

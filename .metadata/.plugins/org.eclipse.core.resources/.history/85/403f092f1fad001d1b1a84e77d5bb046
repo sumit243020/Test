@@ -1,0 +1,13 @@
+package com.mango.uam.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "UAM_ROLE")
+public class UAMRole {
+	
+	@Id
+	private Long id;
+
+}

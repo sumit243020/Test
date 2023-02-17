@@ -1,0 +1,13 @@
+package com.mango.uam.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.mango.uam.repository.UamUserRepository;
+
+@Service
+public class UamUserServiceImpl implements UamUserService {
+			
+	@Autowired
+	private UamUserRepository uamUserRepository;
+}

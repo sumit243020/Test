@@ -1,0 +1,31 @@
+package com.mango.uam.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+
+import com.mango.uam.entity.UamUserEntity;
+
+public interface UamUserService {
+
+	List<UamUserEntity> getAllUser();
+
+	Optional<UamUserEntity> getUserById(Long idUser);
+
+	UamUserEntity saveUser(UamUserEntity uamUserEntity);
+
+	UamUserEntity updateUser(UamUserEntity uamUserEntity);
+
+	void deleteUserById(Long idUser);
+
+	UamUserEntity findById(Long idUser);  //delete responce entity
+
+	void delete(UamUserEntity uamUserEntity);  //delete responce entity
+
+
+
+	
+
+	
+
+}

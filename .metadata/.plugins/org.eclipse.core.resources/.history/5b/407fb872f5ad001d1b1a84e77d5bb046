@@ -1,0 +1,63 @@
+package com.mango.uam.controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import com.mango.uam.Service.UamUserService;
+import com.mango.uam.entity.UamUserEntity;
+
+
+@RestController
+@RequestMapping("/user")
+public class UserController {
+	
+	@Autowired
+	private UamUserService uamUserService;
+	
+	@GetMapping("/getAllUsers")
+	public List<UamUserEntity> getAllUsers() {
+		
+		return uamUserService.getAllUser();
+		}
+	
+	@GetMapping("/getUserById/{idUser}")
+	public ResponseEntity<UamUserEntity> getUserById(@PathVariable("idUser") Long idUser){
+		
+		return uamUserService.getUserById(idUser);
+		
+		}
+	
+	@PostMapping("/saveUser")
+	public UamUserEntity saveUser(@RequestBody UamUserEntity uamUserEntity) {
+		
+		
+		return uamUserService.saveUser(uamUserEntity);
+		
+	}	
+		@PutMapping("/updateUser")
+		public UamUserEntity updateUser(@RequestBody UamUserEntity uamUserEntity) {
+			
+			return uamUserService.updateUser(uamUserEntity) ;
+			
+		}
+		
+		@DeleteMapping("/deleteUserById/{idUser}")
+		public void deleteUser(@PathVariable("idUser") Long idUser) {
+			
+			System.out.println("User is Inactive");
+			
+			uamUserService.deleteUserById(idUser);
+			
+		}
+	}
+

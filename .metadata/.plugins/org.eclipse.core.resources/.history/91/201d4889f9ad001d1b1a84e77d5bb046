@@ -1,0 +1,18 @@
+package com.mango.uam.Service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.mango.uam.entity.UamRoleEntity;
+
+@Service
+public class UamRoleServiceImpl implements UamRoleService {
+
+	@Override
+	public List<UamRoleEntity> getAllRoles() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

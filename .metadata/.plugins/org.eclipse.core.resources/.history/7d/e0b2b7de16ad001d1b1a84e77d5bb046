@@ -1,0 +1,5 @@
+package com.mango.uam.entity;
+
+public class User {
+
+}

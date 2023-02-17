@@ -1,0 +1,11 @@
+package com.mango.uam.Service;
+
+
+
+import com.mango.uam.entity.UserEntity;
+
+public interface UamUserService {
+
+	UserEntity getAllUser();
+
+}

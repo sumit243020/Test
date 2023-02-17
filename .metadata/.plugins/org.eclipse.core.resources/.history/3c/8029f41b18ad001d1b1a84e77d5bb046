@@ -1,0 +1,12 @@
+package com.mango.uam.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
+
+public class UAMUserEntity {
+	
+	@Id
+	@Column(name ="ID")
+	private Long id;
+
+}

@@ -1,0 +1,12 @@
+package com.mango.uam.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.mango.uam.entity.UamUserEntity;
+
+
+
+
+public interface UamRoleRepository extends JpaRepository<UamUserEntity, Long> {
+
+}

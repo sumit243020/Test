@@ -1,0 +1,8 @@
+package com.mango.uam.controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class UamUserController {
+
+}

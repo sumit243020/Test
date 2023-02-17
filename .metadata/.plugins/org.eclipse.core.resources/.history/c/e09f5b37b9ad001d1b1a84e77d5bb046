@@ -1,0 +1,50 @@
+package com.mango.uam.entity;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="UAM_PERMISSION")
+public class UamPermissionEntity {
+	
+	@Id
+	@Column(name="ID_PERMISSION")
+	private long id;
+	
+	@Column(name="CODE")
+	private String code;
+	
+	@Column(name="STATUS")
+	private String status;
+	
+	@Column(name="START_DATE")
+	private Date startDate;
+	
+	@Column(name="END_DATE")
+	private Date endDate;
+	
+	@Column(name="CREATED_BY")
+	private long createdBy;
+	
+	@Column(name="CREATION_DATE")
+	private Date creationDate;
+	
+	@Column(name="LAST_UPDATE_LOGIN")
+	private long lastUpdateLogin;
+	
+	@Column(name="LAST_UPDATED_BY")
+	private long lastUpadatedBy;
+	
+	@Column(name="LAST_UPDATE_DATE")
+	private Date lastUpdatedDate;
+	
+	@Column(name="IS_DEFAULT")
+	private String isDefault;
+	
+	@Column(name="DESCRIPTION")
+	private String discription;
+}
